@@ -17,14 +17,48 @@ class Homepage extends StatelessWidget {
         ),
         backgroundColor: Colors.deepOrangeAccent,
       ),
-      body: Column(
+      body: ListView(
         children: [
           Container(
-            height: 100,
+            height: 200,
             //
             color: Colors.amberAccent,
           ),
-          Container(),
+          Container(
+            color: const Color.fromARGB(255, 193, 52, 10),
+            //
+            height: 200,
+          ),
+          Container(
+            height: 200,
+            //
+            color: Colors.amberAccent,
+          ),
+          Container(
+            color: const Color.fromARGB(255, 193, 52, 10),
+            //
+            height: 200,
+          ),
+          Container(
+            height: 200,
+            //
+            color: Colors.amberAccent,
+          ),
+          Container(
+            color: const Color.fromARGB(255, 193, 52, 10),
+            //
+            height: 200,
+          ),
+          Container(
+            height: 200,
+            //
+            color: Colors.amberAccent,
+          ),
+          Container(
+            color: const Color.fromARGB(255, 193, 52, 10),
+            //
+            height: 200,
+          ),
         ],
       ),
     );
