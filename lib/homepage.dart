@@ -1,64 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:tirthofy_code_1/appbarofapp.dart';
+import 'package:tirthofy_code_1/option_services.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
   @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Tirthofy",
-          style: TextStyle(
-            color: const Color.fromARGB(255, 0, 0, 0),
-            //
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        backgroundColor: Colors.deepOrangeAccent,
-      ),
-      body: ListView(
+      appBar: AppBar(title: Text("Tirthofy")),
+      body: Column(
         children: [
-          Container(
-            height: 200,
-            //
-            color: Colors.amberAccent,
-          ),
-          Container(
-            color: const Color.fromARGB(255, 193, 52, 10),
-            //
-            height: 200,
-          ),
-          Container(
-            height: 200,
-            //
-            color: Colors.amberAccent,
-          ),
-          Container(
-            color: const Color.fromARGB(255, 193, 52, 10),
-            //
-            height: 200,
-          ),
-          Container(
-            height: 200,
-            //
-            color: Colors.amberAccent,
-          ),
-          Container(
-            color: const Color.fromARGB(255, 193, 52, 10),
-            //
-            height: 200,
-          ),
-          Container(
-            height: 200,
-            //
-            color: Colors.amberAccent,
-          ),
-          Container(
-            color: const Color.fromARGB(255, 193, 52, 10),
-            //
-            height: 200,
-          ),
+          appbarofapp(),
+          //
+          SizedBox(height: 10),
+          //
+          OptionServices(),
         ],
       ),
     );
