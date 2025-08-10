@@ -1,5 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/secondpage.dart';
+//import 'package:tirthofy_code_1/secondpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/buildingpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/candlepage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/carpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/donationpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/giftpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/pujapage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/smallcarpage.dart';
+import 'package:tirthofy_code_1/widget/service_page_separate/veganpage.dart';
 
 class Servicebutton extends StatefulWidget {
   const Servicebutton({super.key});
@@ -7,6 +15,17 @@ class Servicebutton extends StatefulWidget {
   @override
   State<Servicebutton> createState() => _ServicebuttonState();
 }
+
+final List<Widget> pages = [
+  const BuildingPage(), // index 0
+  const CandlePage(), // index 1
+  const GiftPage(), // index 2
+  const Carpage(), // index 3
+  const SmallCarPage(), // index 4
+  const DonationPage(), // index 5
+  const PujaPage(), // index 6
+  const VeganPage(), // index 7
+];
 
 final List<String> images = [
   'assets/images/building_16279860.png',
@@ -35,7 +54,7 @@ class _ServicebuttonState extends State<Servicebutton> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Secondpage()),
+                MaterialPageRoute(builder: (context) => pages[index]),
               );
             },
             child: Container(
