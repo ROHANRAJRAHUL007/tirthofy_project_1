@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tirthofy_code_1/appbarofapp.dart';
-import 'package:tirthofy_code_1/option_services.dart';
+import 'package:tirthofy_code_1/serviceButton.dart';
+//import 'package:tirthofy_code_1/service_option.dart';
+//import 'package:tirthofy_code_1/service_option.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -19,8 +21,9 @@ class _HomepageState extends State<Homepage> {
           appbarofapp(),
           //
           SizedBox(height: 10),
-          //
-          OptionServices(),
+          // ServiceOption(),
+          Servicebutton(),
+          //   OptionServices(),
         ],
       ),
     );
