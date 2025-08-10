@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tirthofy_code_1/secondpage.dart';
 
 class Servicebutton extends StatefulWidget {
   const Servicebutton({super.key});
@@ -30,19 +31,27 @@ class _ServicebuttonState extends State<Servicebutton> {
         ),
         itemCount: 8,
         itemBuilder: (BuildContext context, int index) {
-          return Container(
-            color: const Color.fromARGB(0, 255, 255, 255),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  //
-                  radius: 30,
-                  backgroundImage: AssetImage(
-                    images[index],
-                  ), // each gets its own image
-                  backgroundColor: Colors.grey[200],
-                ),
-              ],
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Secondpage()),
+              );
+            },
+            child: Container(
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    //
+                    radius: 30,
+                    backgroundImage: AssetImage(
+                      images[index],
+                    ), // each gets its own image
+                    backgroundColor: Colors.grey[200],
+                  ),
+                ],
+              ),
             ),
           );
         },
