@@ -18,7 +18,14 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tirthofy", style: GoogleFonts.poppins(fontSize: 25)),
+        title: Text(
+          "Tirthofy",
+          style: TextStyle(
+            fontFamily: 'AnandaNamaste',
+            //
+            fontSize: 30,
+          ),
+        ),
         centerTitle: true,
 
         backgroundColor: Colors.deepOrangeAccent,

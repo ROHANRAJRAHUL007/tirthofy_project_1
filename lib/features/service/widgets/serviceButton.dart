@@ -54,6 +54,7 @@ class _ServicebuttonState extends State<Servicebutton> {
             onTap: () {
               if (index == icons.length - 1) {
                 showModalBottomSheet(
+                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
                   context: context,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadiusGeometry.vertical(
@@ -65,10 +66,14 @@ class _ServicebuttonState extends State<Servicebutton> {
                       padding: const EdgeInsets.all(20),
                       child: Column(
                         children: [
-                          const Text('More option'),
+                          const Text(
+                            'More option',
+                            style: TextStyle(fontFamily: 'AnandaNamaste'),
+                          ),
                           ListTile(
                             leading: const Icon(Icons.star),
                             title: Text('special service'),
+
                             onTap: () {
                               Navigator.pop(context);
                             },
