@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:tirthofy_code_1/features/home/presentation/widget/ad_homepage.dart';
 import 'package:tirthofy_code_1/features/home/presentation/widget/seachbox.dart';
 import 'package:tirthofy_code_1/features/service/widgets/serviceButton.dart';
@@ -16,7 +17,12 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Tirthofy")),
+      appBar: AppBar(
+        title: Text("Tirthofy", style: GoogleFonts.poppins(fontSize: 25)),
+        centerTitle: true,
+
+        backgroundColor: Colors.deepOrangeAccent,
+      ),
       body: Column(
         children: [
           appbarofapp(),

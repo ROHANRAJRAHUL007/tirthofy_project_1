@@ -27,15 +27,15 @@ final List<Widget> pages = [
   const Veganpage(), // index 7
 ];
 
-final List<String> images = [
-  'assets/images/building_16279860.png',
-  'assets/images/candle_3479462.png',
-  'assets/images/gift_2349798.png',
-  'assets/images/hatchback_6469044.png',
-  'assets/images/icons8-car-24.png',
-  'assets/images/love_7359018.png',
-  'assets/images/puja_17729044.png',
-  'assets/images/vegan_5465117.png',
+final List<IconData> icons = [
+  Icons.apartment, // building
+  Icons.food_bank_rounded, // food
+  Icons.card_giftcard, // gift
+  Icons.directions_car, // car
+  Icons.motorcycle_rounded, // motorcycle icon
+  Icons.attach_money_rounded, // money
+  Icons.temple_hindu, // Temple,
+  Icons.more_horiz_rounded, // more
 ];
 
 class _ServicebuttonState extends State<Servicebutton> {
@@ -48,26 +48,56 @@ class _ServicebuttonState extends State<Servicebutton> {
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
         ),
-        itemCount: 8,
+        itemCount: icons.length,
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => pages[index]),
-              );
+              if (index == icons.length - 1) {
+                showModalBottomSheet(
+                  context: context,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  builder: (BuildContext context) {
+                    return Container(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        children: [
+                          const Text('More option'),
+                          ListTile(
+                            leading: const Icon(Icons.star),
+                            title: Text('special service'),
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              } else {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => pages[index]),
+                );
+              }
             },
             child: Container(
               color: const Color.fromARGB(0, 255, 255, 255),
               child: Row(
                 children: [
                   CircleAvatar(
-                    //
                     radius: 30,
-                    backgroundImage: AssetImage(
-                      images[index],
-                    ), // each gets its own image
-                    backgroundColor: Colors.grey[200],
+                    backgroundColor: const Color.fromARGB(255, 255, 110, 64),
+                    child: Icon(
+                      icons[index],
+                      //
+                      size: 30,
+                      color: Colors.black87,
+                    ),
                   ),
                 ],
               ),

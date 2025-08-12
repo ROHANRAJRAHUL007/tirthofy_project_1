@@ -18,7 +18,7 @@ class _AdHomepageState extends State<AdHomepage> {
           itemBuilder: (context, index) {
             return ListTile(
               title: Container(
-                color: Colors.blueAccent,
+                color: const Color.fromARGB(255, 255, 110, 64),
                 height: 200,
                 width: 100,
               ),

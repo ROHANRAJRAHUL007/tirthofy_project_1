@@ -16,8 +16,8 @@ class _appbarofappState extends State<appbarofapp> {
         //search box
         Expanded(
           child: Container(
-            margin: EdgeInsets.fromLTRB(15, 1, 1, 1),
-            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+            margin: EdgeInsets.fromLTRB(15, 15, 1, 1),
+            padding: EdgeInsets.fromLTRB(15, 5, 5, 5),
             child: SearchBar(
               leading: Icon(Icons.search),
               hintText: 'Search',
@@ -38,7 +38,7 @@ class _appbarofappState extends State<appbarofapp> {
             );
           },
           child: Container(
-            padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+            padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
             child: CircleAvatar(
               backgroundColor: Colors.deepOrangeAccent,
               child: Icon(Icons.person, color: Colors.white),
