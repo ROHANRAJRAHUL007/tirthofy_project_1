@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/seachbox.dart';
-import 'package:tirthofy_code_1/serviceButton.dart';
+import 'package:tirthofy_code_1/features/home/presentation/widget/ad_homepage.dart';
+import 'package:tirthofy_code_1/features/home/presentation/widget/seachbox.dart';
+import 'package:tirthofy_code_1/features/service/widgets/serviceButton.dart';
 //import 'package:tirthofy_code_1/service_option.dart';
 //import 'package:tirthofy_code_1/service_option.dart';
 
@@ -21,9 +22,10 @@ class _HomepageState extends State<Homepage> {
           appbarofapp(),
           //
           SizedBox(height: 10),
-          // ServiceOption(),
+
           Servicebutton(),
-          //   OptionServices(),
+          // SizedBox(height: 10),
+          Expanded(child: AdHomepage()),
         ],
       ),
     );

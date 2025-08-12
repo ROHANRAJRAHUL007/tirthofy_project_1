@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/homepage.dart';
+import 'package:tirthofy_code_1/features/home/presentation/pages/homepage.dart';
 
 void main() {
   runApp(myApp());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tirthofy_code_1/features/profile/presentation/pages/profile_page.dart';
 
 class appbarofapp extends StatefulWidget {
   const appbarofapp({super.key});
@@ -29,11 +30,19 @@ class _appbarofappState extends State<appbarofapp> {
         ),
         SizedBox(width: 20),
         //profile id
-        Container(
-          padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
-          child: CircleAvatar(
-            backgroundColor: Colors.deepOrangeAccent,
-            child: Icon(Icons.person, color: Colors.white),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ProfilePage()),
+            );
+          },
+          child: Container(
+            padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+            child: CircleAvatar(
+              backgroundColor: Colors.deepOrangeAccent,
+              child: Icon(Icons.person, color: Colors.white),
+            ),
           ),
         ),
       ],

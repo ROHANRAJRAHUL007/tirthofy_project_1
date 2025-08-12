@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 //import 'package:tirthofy_code_1/secondpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/buildingpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/candlepage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/carpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/donationpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/giftpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/pujapage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/smallcarpage.dart';
-import 'package:tirthofy_code_1/widget/service_page_separate/veganpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/buildingpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/candlepage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/carpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/donationpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/giftpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/pujapage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/smallcarpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/veganpage.dart';
 
 class Servicebutton extends StatefulWidget {
   const Servicebutton({super.key});
@@ -17,14 +17,14 @@ class Servicebutton extends StatefulWidget {
 }
 
 final List<Widget> pages = [
-  const BuildingPage(), // index 0
-  const CandlePage(), // index 1
-  const GiftPage(), // index 2
+  const Buildingpage(), // index 0
+  const Candlepage(), // index 1
+  const Giftpage(), // index 2
   const Carpage(), // index 3
-  const SmallCarPage(), // index 4
-  const DonationPage(), // index 5
-  const PujaPage(), // index 6
-  const VeganPage(), // index 7
+  const Smallcarpage(), // index 4
+  const Donationpage(), // index 5
+  const Pujapage(), // index 6
+  const Veganpage(), // index 7
 ];
 
 final List<String> images = [
@@ -42,7 +42,7 @@ class _ServicebuttonState extends State<Servicebutton> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400,
+      height: 200,
       child: GridView.builder(
         padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
