@@ -18,5 +18,5 @@ final List<IconData> iconsbBottomSheet = [
   Icons.motorcycle_rounded, // motorcycle icon
   Icons.attach_money_rounded, // money
   Icons.temple_hindu, // Temple,
-  Icons.more_horiz_rounded, // more
+  Icons.umbrella, // more
 ];

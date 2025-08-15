@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tirthofy_code_1/features/home/presentation/widget/ad_image_homepage.dart';
 
 class AdHomepage extends StatefulWidget {
   const AdHomepage({super.key});
@@ -14,13 +15,21 @@ class _AdHomepageState extends State<AdHomepage> {
       body: SizedBox(
         child: ListView.builder(
           padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
-          itemCount: 20,
+          itemCount: 7,
           itemBuilder: (context, index) {
             return ListTile(
-              title: Container(
-                color: const Color.fromARGB(255, 255, 110, 64),
-                height: 200,
-                width: 100,
+              title: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: Container(
+                  color: const Color.fromARGB(255, 255, 110, 64),
+                  height: 200,
+                  width: 100,
+                  child: Image.asset(
+                    imagesAdHomepage[index],
+                    //
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
             );
           },

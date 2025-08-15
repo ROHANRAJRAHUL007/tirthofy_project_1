@@ -11,7 +11,7 @@ class CustomCircleAvatar extends StatelessWidget {
   const CustomCircleAvatar({
     Key? key,
     required this.icon,
-    this.backgroundColor = const Color.fromARGB(255, 255, 115, 0),
+    this.backgroundColor = Colors.deepOrangeAccent,
     this.iconColor = Colors.black87,
     this.radius = 30,
     this.iconSize = 30,
