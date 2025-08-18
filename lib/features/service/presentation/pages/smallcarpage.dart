@@ -1,5 +1,6 @@
 // TODO Implement this library.
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Smallcarpage extends StatefulWidget {
   const Smallcarpage({super.key});
@@ -9,12 +10,16 @@ class Smallcarpage extends StatefulWidget {
 }
 
 class _SmallcarpageState extends State<Smallcarpage> {
+  LatLng myCurrentLocation = LatLng(13.0108, 74.7943);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 100,
-      color: const Color.fromARGB(255, 112, 51, 102),
+    return Scaffold(
+      body: GoogleMap(
+        initialCameraPosition: CameraPosition(
+          target: myCurrentLocation,
+          zoom: 15,
+        ),
+      ),
     );
   }
 }
