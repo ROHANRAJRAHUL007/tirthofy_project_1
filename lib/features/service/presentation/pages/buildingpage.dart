@@ -11,6 +11,16 @@ class Buildingpage extends StatefulWidget {
 class _BuildingpageState extends State<Buildingpage> {
   @override
   Widget build(BuildContext context) {
-    return Container(height: 100, width: 100, color: Colors.amberAccent);
+    return Column(
+      children: [
+        //1
+        Container(height: 100, width: 100, color: Colors.amber),
+        SizedBox(height: 10),
+        //2
+        Container(height: 100, width: 100, color: Colors.amber),
+        //3
+        Container(height: 100, width: 100, color: Colors.amber),
+      ],
+    );
   }
 }
