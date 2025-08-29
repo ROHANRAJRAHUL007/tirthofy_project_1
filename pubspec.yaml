@@ -36,7 +36,9 @@ dependencies:
   google_maps_flutter: ^2.12.3
   uuid:
   http:
-
+  bloc:
+  flutter_bloc:
+  meta:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -67,6 +69,13 @@ flutter:
     - assets/images/
     - assets/images/imageadhomepage/
     - assets/fonts/
+    - assets/images/images_for_Food/foodicon/
+    - assets/images/images_for_Food/food_details_pic/newly_arrival/
+    - assets/images/images_for_Food/food_details_pic/all_day_breakfast/
+    - assets/images/images_for_Food/food_details_pic/snacks_indi/
+    - assets/images/images_for_Food/food_details_pic/dessert/
+    - assets/images/images_for_Food/food_details_pic/meals/
+    - assets/images/images_for_Food/food_details_pic/cold_bavrages/
   #  - images/a_dot_ham.jpeg
 
   # assets:

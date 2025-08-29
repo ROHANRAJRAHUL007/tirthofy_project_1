@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/food/fooditemimage.dart';
 
 class Optionfood extends StatefulWidget {
   const Optionfood({super.key});
@@ -20,9 +21,18 @@ class _OptionfoodState extends State<Optionfood> {
           crossAxisSpacing: 4,
           mainAxisSpacing: 4,
         ),
-        itemCount: 12,
+        itemCount: foodiconimages.length,
         itemBuilder: (BuildContext context, int index) {
-          return Container(height: 100, width: 100, color: Colors.blue);
+          return Container(
+            height: 100,
+            width: 100,
+            //
+            child: Image.asset(
+              foodiconimages[index],
+              //
+              fit: BoxFit.contain,
+            ),
+          );
         },
       ),
     );

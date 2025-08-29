@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/buildingpage.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/food/foodpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/buildingpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/food/home_page_food/home_page_main_file/food_home_page.dart';
 import 'package:tirthofy_code_1/features/service/presentation/pages/carpage/carpage_home.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/donationpage.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/giftpage.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/pujapage.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/smallcarpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/donation/donationpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/gift/giftpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/pujapage/pujapage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/bike/smallcarpage.dart';
 //import 'package:tirthofy_code_1/features/service/presentation/pages/food/veganpage.dart';
 
 final List<Widget> pages = [

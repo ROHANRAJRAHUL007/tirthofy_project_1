@@ -1,0 +1,96 @@
+final List<String> snacksName = [
+  "Bread-Pakora",
+  "dahi_papri",
+  "dhokla",
+  "kasori",
+  "pakora",
+  "paneer-kathi-roll-recipe",
+  "Paneer-Tikka-Featured",
+  "samosa",
+  "Veg-Spring-Rolls",
+];
+final List<String> under99Names = [
+  "Bread-Pakora",
+  "dahi_papri",
+  "dhokla",
+  "kasori",
+  "pakora",
+  "paneer-kathi-roll-recipe",
+  "Paneer-Tikka-Featured",
+  "samosa",
+  "Veg-Spring-Rolls",
+];
+final List<String> dessertsName = [
+  " barfi",
+  "Gulab-Jamun",
+  "kher",
+  "laddu",
+  "MysorePak",
+  "pera",
+  "resmalai",
+  "roshogolla",
+  "Suji-Halwa",
+  "zelabi",
+];
+final List<String> mealsName = [
+  "Gujarati Thali ",
+  "Gujarati Thali",
+  "Madhya Pradesh Thali",
+  "maharastrian_Thali",
+  "Manipuri Thali",
+  "moharaThali",
+  "NORTH INDIAN THALI ",
+  "South Indian Thali",
+];
+final List<String> coldbavrageName = [
+  "bislari",
+  "coca-cola",
+  "laahori_jeera",
+  "mountain_dew",
+  "pepsi",
+];
+final List<String> alldayBreakfastName = [
+  "Bread-Pakora",
+  "dahi_papri",
+  "dhokla",
+  "kasori",
+  "pakora",
+  "paneer-kathi-roll-recipe",
+  "Paneer-Tikka-Featured",
+  "samosa",
+  "Veg-Spring-Rolls",
+];
+final List<String> comboName = [
+  "Bread-Pakora",
+  "dahi_papri",
+  "dhokla",
+  "kasori",
+  "pakora",
+  "paneer-kathi-roll-recipe",
+  "Paneer-Tikka-Featured",
+  "samosa",
+  "Veg-Spring-Rolls",
+];
+final List<String> newlylaunchedName = [
+  "Bread-Pakora",
+  "dahi_papri",
+  "dhokla",
+  "kasori",
+  "pakora",
+  "paneer-kathi-roll-recipe",
+  "Paneer-Tikka-Featured",
+  "samosa",
+  "Veg-Spring-Rolls",
+];
+final List<String> bestsellerName = [
+  "barfi",
+  " Gulab-Jamun",
+  " kher",
+  " laddu",
+  " MysorePak",
+  " pera",
+  " resmalai",
+  " roshogolla",
+  " Suji-Halwa",
+  " zelabi",
+];
