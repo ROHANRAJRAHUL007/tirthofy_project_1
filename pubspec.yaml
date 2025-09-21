@@ -39,6 +39,20 @@ dependencies:
   bloc:
   flutter_bloc:
   meta:
+  google_places_api_flutter:
+  geolocator:
+  geocoder2:
+  flutter_polyline_points:
+  location:
+  email_validator:
+  intl_phone_field:
+  firebase_auth:
+  firebase_core:
+  firebase_database:
+  firebase_messaging:
+  firebase_storage:
+  fluttertoast:
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -76,6 +90,8 @@ flutter:
     - assets/images/images_for_Food/food_details_pic/dessert/
     - assets/images/images_for_Food/food_details_pic/meals/
     - assets/images/images_for_Food/food_details_pic/cold_bavrages/
+    - assets/images/hotel_images/
+    - assets/images/registation_page/
   #  - images/a_dot_ham.jpeg
 
   # assets:

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "801510663076",
+    "project_id": "tirthofy",
+    "storage_bucket": "tirthofy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:801510663076:android:9079d10ba9227190cd1731",
+        "android_client_info": {
+          "package_name": "com.example.tirthofy_code_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb1UIrs7GnhFZb-JIOQWx0uYxjgWpyCL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
