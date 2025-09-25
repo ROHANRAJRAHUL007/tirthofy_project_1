@@ -34,7 +34,18 @@ class _appbarofappState extends State<appbarofapp> {
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ProfilePage()),
+              MaterialPageRoute(
+                builder: (context) => ProfilePage(
+                  // user: User(
+                  //   name: "Rahul Bzsraj",
+                  //   department: "Engineering",
+                  //   phone: "+91 9876543210",
+                  //   email: "rahul@example.com",
+                  //   imageUrl:
+                  //       "https://i.pravatar.cc/150?img=10", // random avatar
+                  // ),
+                ),
+              ),
             );
           },
           child: Container(

@@ -1,5 +1,3 @@
-
-
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -31,8 +29,7 @@ class _HotelListPageState extends State<HotelListPage> {
       Uri.parse(url),
       headers: {
         'x-rapidapi-host': 'booking-com.p.rapidapi.com',
-        'x-rapidapi-key':
-            '18c7dee3ffmshc0ef7be87eedeefp1ca169jsn483331be3087', // 🔑 replace with your key
+        'x-rapidapi-key': '18c7dee3ffmshc0ef7be87eedeefp1ca169jsn483331be3087',
       },
     );
 
