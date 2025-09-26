@@ -94,6 +94,8 @@ flutter:
     - assets/images/images_for_Food/food_details_pic/cold_bavrages/
     - assets/images/hotel_images/
     - assets/images/registation_page/
+    - assets/images/donation_images/
+
   #  - images/a_dot_ham.jpeg
 
   # assets:

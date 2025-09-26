@@ -1,9 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tirthofy_code_1/core/theme.dart/theme_provider.dart';
+import 'package:tirthofy_code_1/features/home/presentation/pages/homepage.dart';
 //import 'package:tirthofy_code_1/features/home/presentation/pages/forget_password.dart';
 
-import 'package:tirthofy_code_1/features/home/presentation/pages/log_in.dart';
+//import 'package:tirthofy_code_1/features/home/presentation/pages/log_in.dart';
 //import 'package:tirthofy_code_1/features/home/presentation/pages/splash_screen.dart';
 
 Future<void> main() async {
@@ -27,11 +28,11 @@ class _myAppState extends State<myApp> {
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
       theme: MyThemes.lightTheme,
-      darkTheme: MyThemes.lightTheme,
+      //  darkTheme: MyThemes.lightTheme,
       color: Colors.deepOrange,
 
       //
-      home: LogIn(),
+      home: Homepage(),
     );
   }
 }
