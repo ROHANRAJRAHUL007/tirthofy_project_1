@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/features/service/widgets/all_icons.dart';
 import 'package:tirthofy_code_1/features/service/widgets/all_pages_button.dart';
-import 'package:tirthofy_code_1/features/service/widgets/circle_avatar.dart';
 
 class Servicebutton extends StatefulWidget {
   const Servicebutton({super.key});
@@ -11,62 +9,139 @@ class Servicebutton extends StatefulWidget {
 }
 
 class _ServicebuttonState extends State<Servicebutton> {
+  // Labels for main grid
+  final List<String> labels = [
+    "Hotel",
+    "Food",
+    "Flight",
+    "Car",
+    "Bike",
+    "Gift",
+    "Health",
+    "All",
+  ];
+
+  final List<String> images = [
+    "assets/images/service_button_not_hd/hotel.png",
+    "assets/images/service_button_not_hd/dineout.jpg",
+    "assets/images/service_button_not_hd/flight.png",
+    "assets/images/service_button_not_hd/car.png",
+    "assets/images/service_button_not_hd/bike.png",
+    "assets/images/service_button_not_hd/shight_seeing.png",
+    "assets/images/service_button_not_hd/mart.png",
+    "assets/images/service_button_not_hd/more.png",
+  ];
+
+  // Labels for bottom sheet grid
+  final List<String> labelsBottomSheet = [
+    "Service 1",
+    "Service 2",
+    "Service 3",
+    "Service 4",
+    "Service 5",
+    "Service 6",
+    "Service 7",
+    "Service 8",
+    "Service 9",
+    "Service 10",
+  ];
+
+  // Image paths for bottom sheet grid
+  final List<String> imagesBottomSheet = [
+    "assets/images/service_button_not_hd/ride_later.png",
+    "assets/images/service_button_not_hd/train.png",
+    "assets/images/service_button_not_hd/holiday.png",
+    "assets/images/service_button_not_hd/homestays.png",
+    "assets/images/service_button_not_hd/donation.png",
+    "assets/images/service_button_not_hd/insurance.png",
+    "assets/images/service_button_not_hd/health.png",
+    "assets/images/service_button_not_hd/pooja_booking.png",
+    "assets/images/service_button_not_hd/gift.png",
+    "assets/images/service_button_not_hd/blog.png",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
+      height: 220,
       child: GridView.builder(
-        padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
+          childAspectRatio: 0.85,
         ),
-        itemCount: icons.length,
+        itemCount: labels.length,
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
+            borderRadius: BorderRadius.circular(16),
             onTap: () {
-              if (index == icons.length - 1) {
+              if (index == labels.length - 1) {
+                // Open bottom sheet when "All" is clicked
                 showModalBottomSheet(
-                  backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-                  context: context,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.vertical(
+                  backgroundColor: Colors.white,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
                       top: Radius.circular(20),
                     ),
                   ),
+                  context: context,
                   builder: (BuildContext context) {
                     return Column(
                       children: [
-                        const SizedBox(height: 10),
-                        //
-                        const Text('More option'),
-                        const SizedBox(height: 10),
+                        const SizedBox(height: 12),
+                        const Text(
+                          "More options",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
                         Expanded(
                           child: GridView.builder(
-                            padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
+                            padding: const EdgeInsets.all(20),
                             gridDelegate:
-                                SliverGridDelegateWithFixedCrossAxisCount(
+                                const SliverGridDelegateWithFixedCrossAxisCount(
                                   crossAxisCount: 4,
-                                  mainAxisSpacing: 55,
-                                  crossAxisSpacing: 55,
+                                  mainAxisSpacing: 25,
+                                  crossAxisSpacing: 25,
+                                  childAspectRatio: 0.85,
                                 ),
-                            itemCount: 8,
-                            itemBuilder: (BuildContext context, int moreindex) {
+                            itemCount: labelsBottomSheet.length,
+                            itemBuilder: (BuildContext context, int moreIndex) {
                               return InkWell(
                                 onTap: () {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                       builder: (context) =>
-                                          morepages[moreindex],
+                                          morePages[moreIndex],
                                     ),
                                   );
                                 },
-                                child: SizedBox(
-                                  height: 5,
-                                  width: 5,
-                                  child: CustomCircleAvatar(
-                                    //   radius: 1,
-                                    icon: iconsbBottomSheet[moreindex],
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFF4F9F4),
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset(
+                                        imagesBottomSheet[moreIndex],
+                                        height: 40,
+                                        width: 40,
+                                        fit: BoxFit.contain,
+                                      ),
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        labelsBottomSheet[moreIndex],
+                                        style: const TextStyle(fontSize: 12),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
                                   ),
                                 ),
                               );
@@ -78,6 +153,7 @@ class _ServicebuttonState extends State<Servicebutton> {
                   },
                 );
               } else {
+                // Normal item click
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => pages[index]),
@@ -85,11 +161,28 @@ class _ServicebuttonState extends State<Servicebutton> {
               }
             },
             child: Container(
-              color: const Color.fromARGB(0, 255, 255, 255),
-              child: Row(
+              decoration: BoxDecoration(
+                color: const Color(0xFFF4F9F4),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  //
-                  CustomCircleAvatar(icon: icons[index]),
+                  Image.asset(
+                    images[index],
+                    height: 40,
+                    width: 40,
+                    fit: BoxFit.contain,
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    labels[index],
+                    style: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
             ),

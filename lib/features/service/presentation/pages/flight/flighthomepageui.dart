@@ -1,21 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/agoda_hotel_list.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/agodanewpage.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/booking.com.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/agoda_searchpage.dart';
+import 'package:tirthofy_code_1/features/service/presentation/pages/flight/flightsearchpage.dart';
 
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/goibibo.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/hotelhomepagead.dart';
-import 'package:tirthofy_code_1/features/service/presentation/pages/Hotel/pages/hotellist_page.dart';
-
-class Hotelhomepageui extends StatefulWidget {
-  const Hotelhomepageui({super.key});
+class FlighthomepageUI extends StatefulWidget {
+  const FlighthomepageUI({super.key});
 
   @override
-  State<Hotelhomepageui> createState() => _HotelhomepageuiState();
+  State<FlighthomepageUI> createState() => _FlighthomepageUIState();
 }
 
-class _HotelhomepageuiState extends State<Hotelhomepageui> {
+class _FlighthomepageUIState extends State<FlighthomepageUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,10 +19,10 @@ class _HotelhomepageuiState extends State<Hotelhomepageui> {
           // Booking.com
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HotelsListPage()),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => HotelsListPage()),
+              // );
             },
             child: Row(
               children: [
@@ -66,7 +59,7 @@ class _HotelhomepageuiState extends State<Hotelhomepageui> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Goibibo()),
+                MaterialPageRoute(builder: (context) => FlightSearchPage()),
               );
             },
             child: Row(
@@ -88,7 +81,7 @@ class _HotelhomepageuiState extends State<Hotelhomepageui> {
           const SizedBox(height: 16),
 
           // Ad section
-          Hotelhomepagead(),
+          // Hotelhomepagead(),
         ],
       ),
     );
